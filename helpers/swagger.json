@@ -1,0 +1,118 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This a Assignment by fortunesoft assign to zain has created a simple Swagger Documentation",
+    "version": "1.0.0",
+    "title": "IMDB Movies API - Fortunesoft",
+    "contact": {
+      "email": "786zainulla@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "schemes": ["http"],
+  "host": "localhost:3333",
+  "basePath": "/api",
+  "paths": {
+    "/movies/getMovies": {
+      "get": {
+        "security": [
+            {
+               "bearerAuth": []
+            }
+         ],
+        "summary": "Get all the movies filtered by genres",
+        "description": "Get IMDB Movies",
+        "produces": ["application/json"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "description": "JWT Token Required",
+                "required": true,
+                "schema": {
+                  "type": "string"
+                },"style": "simple"}]
+        ,
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/moviesResponse"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/InvalidResponse"
+            }
+          }
+        }
+      }
+     
+    }
+  },
+  "definitions": {
+    "moviesResponse": {
+      "type": "object",
+      "properties": {
+        "backdrop": {
+          "type": "String"
+        },
+        "cast": {
+          "type": "Array"
+        },
+        "overview": {
+          "type": "String"
+        },
+        "slug": {
+          "type": "String"
+        },
+        "classification": {
+          "type": "String"
+        },
+        "released_on": { "type": "Date" },
+        "director": {
+          "type": "String",
+          "maxlength": 35
+        },
+        "imdb_rating": {
+          "type": "Number",
+          "maxlength": 4
+        },
+        "length": {
+          "type": "String"
+        },
+        "id": {
+          "type": "String"
+        },
+        "poster": {
+          "type": "String"
+        },
+        "title": {
+          "type": "String"
+        },
+        "genresType": {
+          "type": "Array"
+        },
+        "createdAt": { "type": "Date" }
+      }
+    },
+    "InvalidResponse": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

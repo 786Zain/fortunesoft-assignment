@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "aa8efeba-8f65-4669-8a4b-d7b33ca4caaa",
+		"name": "Fortunesoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ForTuneSoft",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTW9oYW1tYWQgWmFpbiIsImNvbXBhbnkiOiJmb3J0dW5lc29mdCJ9.na7Mk7OeZcKyRyLfXsolQeXVkCYVVDsPqcxStX2VGEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/movies/getMovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"movies",
+						"getMovies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

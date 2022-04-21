@@ -1,0 +1,38 @@
+{
+  "name": "zain-fortunesoft-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --inspect app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Mohammad Zainulla",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "custom-env": "^2.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "express-http-context": "^1.2.4",
+    "express-sanitizer": "^1.0.5",
+    "express-validator": "^6.4.0",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "mongoose-unique-validator": "^2.0.3",
+    "node-fetch": "^3.2.3",
+    "swagger-jsdoc": "^6.2.0",
+    "swagger-ui-express": "^4.3.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
